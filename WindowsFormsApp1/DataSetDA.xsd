@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetDA" targetNamespace="http://tempuri.org/DataSetDA.xsd" xmlns:mstns="http://tempuri.org/DataSetDA.xsd" xmlns="http://tempuri.org/DataSetDA.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLDAConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLDAConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.QLDAConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLDAConnectionString2 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DuAn.MaDA, DuAn.TenDA, DuAn.NgayBD, DuAn.NgayKT, TienDo.TenTD
+FROM     DuAn INNER JOIN
+                  TienDo ON DuAn.TienDoDA = TienDo.MaTD</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaDA" DataSetColumn="MaDA" />
+              <Mapping SourceColumn="TenDA" DataSetColumn="TenDA" />
+              <Mapping SourceColumn="NgayBD" DataSetColumn="NgayBD" />
+              <Mapping SourceColumn="NgayKT" DataSetColumn="NgayKT" />
+              <Mapping SourceColumn="TenTD" DataSetColumn="TenTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetDA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetDA" msprop:Generator_DataSetName="DataSetDA">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaDA" msprop:Generator_ColumnPropNameInRow="MaDA" msprop:Generator_ColumnPropNameInTable="MaDAColumn" msprop:Generator_ColumnVarNameInTable="columnMaDA" msprop:Generator_UserColumnName="MaDA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenDA" msprop:Generator_ColumnPropNameInRow="TenDA" msprop:Generator_ColumnPropNameInTable="TenDAColumn" msprop:Generator_ColumnVarNameInTable="columnTenDA" msprop:Generator_UserColumnName="TenDA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgayBD" msprop:Generator_ColumnPropNameInRow="NgayBD" msprop:Generator_ColumnPropNameInTable="NgayBDColumn" msprop:Generator_ColumnVarNameInTable="columnNgayBD" msprop:Generator_UserColumnName="NgayBD" type="xs:dateTime" />
+              <xs:element name="NgayKT" msprop:Generator_ColumnPropNameInRow="NgayKT" msprop:Generator_ColumnPropNameInTable="NgayKTColumn" msprop:Generator_ColumnVarNameInTable="columnNgayKT" msprop:Generator_UserColumnName="NgayKT" type="xs:dateTime" />
+              <xs:element name="TenTD" msprop:Generator_ColumnPropNameInRow="TenTD" msprop:Generator_ColumnPropNameInTable="TenTDColumn" msprop:Generator_ColumnVarNameInTable="columnTenTD" msprop:Generator_UserColumnName="TenTD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:MaDA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
